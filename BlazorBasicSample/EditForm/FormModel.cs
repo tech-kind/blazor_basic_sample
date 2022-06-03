@@ -9,6 +9,7 @@ namespace BlazorBasicSample.EditForm
         [MinLength(3), MaxLength(20)]
         public string Name { get; set; }
 
+        [BirthdayValidator(ErrorCheck = true)]
         public DateTime Birthday { get; set; } = DateTime.Today;
 
         [Range(0, 100, ErrorMessage = "年齢は0～100の間で入力してください。")]
