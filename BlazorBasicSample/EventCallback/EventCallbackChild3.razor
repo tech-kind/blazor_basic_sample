@@ -1,0 +1,11 @@
+﻿<p>
+    <button class="btn btn-success" @onclick=@(async () => await OnClickCallback.InvokeAsync(10))>
+        ボタン3
+    </button>
+</p>
+
+@code {
+
+    [Parameter]
+    public EventCallback<int> OnClickCallback { get; set; }
+}
